@@ -17,9 +17,7 @@ for (i=0; i<4; i++) {
 cols.forEach((col) => container.appendChild(col));
 
 var squares = document.querySelectorAll(".square");
-const changeColour = (div) => div.setAttribute("style", "background-color: red;");
+const changeColour = (e) => e.target.classList.add("hover")
 
-squares.forEach((square) => square.addEventListener("mouseover", (div) => changeColour(div)))
-
-console.log(squares)
+squares.forEach((square) => square.addEventListener("mouseover", (e) => changeColour(e)))
 
